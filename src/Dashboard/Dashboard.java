@@ -16,10 +16,8 @@ public class Dashboard extends javax.swing.JFrame {
      * Creates new form Dashboard
      */
     public Dashboard() {
-        initComponents();
-    
-        
-        this.setLocationRelativeTo(null);
+         initComponents();
+         this.setLocationRelativeTo(null);
     }
 
     /**
@@ -41,12 +39,12 @@ public class Dashboard extends javax.swing.JFrame {
         logout_btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridBagLayout());
 
         dashboard.setBackground(new java.awt.Color(153, 153, 153));
         dashboard.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
         dashboard.setMinimumSize(new java.awt.Dimension(0, 0));
         dashboard.setPreferredSize(new java.awt.Dimension(800, 500));
+        dashboard.setLayout(new java.awt.GridBagLayout());
 
         petrecords_btn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         petrecords_btn.setText("PET RECORDS");
@@ -55,6 +53,14 @@ public class Dashboard extends javax.swing.JFrame {
                 petrecords_btnActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 129;
+        gridBagConstraints.ipady = 58;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 153, 0, 0);
+        dashboard.add(petrecords_btn, gridBagConstraints);
 
         petgallery_btn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         petgallery_btn.setText("PET GALLERY");
@@ -63,6 +69,14 @@ public class Dashboard extends javax.swing.JFrame {
                 petgallery_btnActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 132;
+        gridBagConstraints.ipady = 58;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(27, 154, 0, 0);
+        dashboard.add(petgallery_btn, gridBagConstraints);
 
         appointment_btn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         appointment_btn.setText("APPOINTMENT SCHEDULING");
@@ -71,6 +85,14 @@ public class Dashboard extends javax.swing.JFrame {
                 appointment_btnActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 51;
+        gridBagConstraints.ipady = 58;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 30, 0, 0);
+        dashboard.add(appointment_btn, gridBagConstraints);
 
         medications_btn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         medications_btn.setText("MEDICATIONS / HEALTH TRACKING");
@@ -79,6 +101,15 @@ public class Dashboard extends javax.swing.JFrame {
                 medications_btnActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 285;
+        gridBagConstraints.ipady = 58;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(27, 154, 101, 0);
+        dashboard.add(medications_btn, gridBagConstraints);
 
         contacts_btn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         contacts_btn.setText("EMERGENCY CONTACTS & VET INFO");
@@ -87,6 +118,15 @@ public class Dashboard extends javax.swing.JFrame {
                 contacts_btnActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 9;
+        gridBagConstraints.ipady = 58;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(27, 30, 0, 0);
+        dashboard.add(contacts_btn, gridBagConstraints);
 
         logout_btn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         logout_btn.setText("LOGOUT");
@@ -95,60 +135,14 @@ public class Dashboard extends javax.swing.JFrame {
                 logout_btnActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout dashboardLayout = new javax.swing.GroupLayout(dashboard);
-        dashboard.setLayout(dashboardLayout);
-        dashboardLayout.setHorizontalGroup(
-            dashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dashboardLayout.createSequentialGroup()
-                .addGroup(dashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(dashboardLayout.createSequentialGroup()
-                        .addGap(135, 135, 135)
-                        .addComponent(petrecords_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(52, 52, 52)
-                        .addComponent(appointment_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(dashboardLayout.createSequentialGroup()
-                        .addGap(136, 136, 136)
-                        .addComponent(petgallery_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(52, 52, 52)
-                        .addComponent(contacts_btn))
-                    .addGroup(dashboardLayout.createSequentialGroup()
-                        .addGap(245, 245, 245)
-                        .addComponent(medications_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(118, 118, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dashboardLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(logout_btn)
-                .addGap(25, 25, 25))
-        );
-        dashboardLayout.setVerticalGroup(
-            dashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dashboardLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(logout_btn)
-                .addGap(88, 88, 88)
-                .addGroup(dashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(petrecords_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(appointment_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(dashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(dashboardLayout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(petgallery_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(contacts_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addComponent(medications_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(48, Short.MAX_VALUE))
-        );
-
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 765;
-        gridBagConstraints.ipady = 459;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(0, 33, 0, 19);
-        getContentPane().add(dashboard, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(20, 50, 0, 25);
+        dashboard.add(logout_btn, gridBagConstraints);
+
+        getContentPane().add(dashboard, java.awt.BorderLayout.CENTER);
         dashboard.getAccessibleContext().setAccessibleName("dashboard");
 
         pack();

@@ -33,9 +33,9 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="912" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="911" max="32767" attributes="0"/>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Component id="jPanel2" alignment="0" pref="912" max="32767" attributes="0"/>
+                  <Component id="jPanel2" alignment="0" pref="911" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -104,20 +104,31 @@
             <Component class="javax.swing.JButton" name="logout_btn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="12" style="1"/>
+                  <Font name="SansSerif" size="12" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="LOGOUT"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logout_btnActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="back_btn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="12" style="1"/>
+                  <Font name="SansSerif" size="12" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="BACK"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="back_btnActionPerformed"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JPanel" name="MedicationsForm">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="12" style="0"/>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -130,8 +141,6 @@
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="end_datetxtbox" min="-2" pref="134" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="notestxt" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="mednametxt" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
@@ -156,7 +165,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <Component id="notestxtbox" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
+                              <Component id="petComboBox" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="27" max="32767" attributes="0"/>
                       </Group>
@@ -165,9 +174,9 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="petComboBox" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="mednametxt" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="medname_txtbox" min="-2" pref="30" max="-2" attributes="0"/>
@@ -191,17 +200,13 @@
                               <Component id="start_datetxtbox" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="end_datetxtbox" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                          <Component id="notestxt" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="notestxtbox" min="-2" pref="67" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="add_pet" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                               <Component id="update_pet" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                               <Component id="delete_pet" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="37" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -209,6 +214,9 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="mednametxt">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="SansSerif" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Medicine Name:"/>
                   </Properties>
                 </Component>
@@ -223,40 +231,52 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="frequencytxt">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="SansSerif" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Frequency:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="notestxtbox">
-                </Component>
                 <Component class="javax.swing.JButton" name="add_pet">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="SansSerif" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="ADD"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="add_petActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="update_pet">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="SansSerif" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="UPDATE"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="update_petActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="delete_pet">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="SansSerif" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="DELETE"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="notestxt">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Notes:"/>
-                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="delete_petActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="breed">
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton1">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Select Pet By ID:"/>
-                  </Properties>
-                </Component>
                 <Component class="javax.swing.JLabel" name="start_datetxt">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="SansSerif" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Medication Start:"/>
                   </Properties>
                 </Component>
@@ -266,8 +286,26 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="end_datetxt">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="SansSerif" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Medication End:"/>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="petComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
@@ -283,15 +321,18 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="a0" green="a0" id="Control Shadow" palette="2" red="a0" type="palette"/>
                     </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="SansSerif" size="12" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="7" rowCount="21">
                         <Column editable="true" title="pet_id" type="java.lang.Integer"/>
+                        <Column editable="true" title="pet_name" type="java.lang.String"/>
                         <Column editable="true" title="med_name" type="java.lang.String"/>
                         <Column editable="true" title="dosage" type="java.lang.String"/>
                         <Column editable="true" title="frequency" type="java.lang.String"/>
                         <Column editable="true" title="start_date" type="java.lang.String"/>
                         <Column editable="true" title="end_date" type="java.lang.String"/>
-                        <Column editable="true" title="notes" type="java.lang.String"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
